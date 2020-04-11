@@ -43,4 +43,8 @@ memory_usage
 
 ### Docker image
 
-https://hub.docker.com/r/l3opold/etherpad_exporter
+https://hub.docker.com/repository/docker/l3opold/etherpad_exporter
+
+### Grafana dashboard
+
+https://github.com/L3o-pold/etherpad_exporter/tree/master/grafana/dashboard.json
