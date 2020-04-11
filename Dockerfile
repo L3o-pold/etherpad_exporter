@@ -1,8 +1,14 @@
-ARG ARCH="amd64"
-ARG OS="linux"
-FROM quay.io/prometheus/busybox:latest
+FROM golang:1.13-buster as build
+MAINTAINER leopold.jacquot@gmail.com
 
-COPY etherpad_exporter /bin/etherpad_exporter
+WORKDIR /go/src/app
+COPY . .
+
+RUN make
+
+FROM alpine as app
+
+COPY --from=build /go/src/app/etherpad_exporter /bin/etherpad_exporter
 
 ENTRYPOINT ["/bin/etherpad_exporter"]
 EXPOSE 9301
