@@ -1,12 +1,23 @@
 # Etherpad prometheus exporter
 
-### Build
+[![Docker Repository on Quay](https://quay.io/repository/l3opold/etherpad_exporter/status)][quay]
+[![Docker pull](https://img.shields.io/docker/pulls/l3opold/etherpad_exporter)][dockerpull]
+[![Go Report Card](https://goreportcard.com/badge/github.com/L3o-pold/etherpad_exporter)][goreportcard]
+[![Code Climate](https://codeclimate.com/github/L3o-pold/etherpad_exporter/badges/gpa.svg)][codeclimate]
+
+[quay]: https://quay.io/repository/l3opold/etherpad_exporter
+[dockerpull]: https://hub.docker.com/r/l3opold/etherpad_exporter/
+[goreportcard]: https://goreportcard.com/report/github.com/L3o-pold/etherpad_exporter
+[codeclimate]: https://codeclimate.com/github/L3o-pold/etherpad_exporter
+
+
+## Build
 
 ```bash
 make build
 ```
 
-### Usage
+## Usage
 
 ```bash
 etherpad_exporter -h
@@ -27,7 +38,7 @@ Flags:
 
 ```
 
-### Exposed metrics
+## Exposed metrics
 
 ```bash
 users_total
@@ -41,10 +52,14 @@ http_500_total
 memory_usage
 ```
 
-### Docker image
+## Docker image
 
 https://hub.docker.com/repository/docker/l3opold/etherpad_exporter
 
-### Grafana dashboard
+## Grafana dashboard
 
 https://github.com/L3o-pold/etherpad_exporter/tree/master/grafana/dashboard.json
+
+## License
+
+Apache License 2.0, see [LICENSE](https://github.com/prometheus/haproxy_exporter/blob/master/LICENSE).
